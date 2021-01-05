@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hankisul_Data_Factory</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}?hs" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							
+							<!-- Header -->
+								<header id="header">
+									<a href="/" class="logo"><strong>Created</strong> by Hankisul</a>
+									<ul class="icons">
+										<img src="{{ url_for('static', filename='images/hankisul.png') }}" />
+										
+									</ul>	
+								</header>
+							<!-- Banner -->
+								      {% block content %}{% endblock %}
+						</div>
+						
+					</div>
+				<!-- Sidebar -->
+				
+					<div id="sidebar">
+						<div class="inner">
+							<section>
+							<form action="/sign-out" method="GET">
+								<button class="btn">Sign out</button>
+							  </form>
+							</section>
+							<!-- Menu -->
+								<nav id="menu">
+									<header class="major">
+										<h2>Menu</h2>
+									</header>
+									<ul>
+										<li><a href="/">Homepage</a></li>
+										<li><a href="http://ai.hankisul.com" target="_blank">Data labeling tool</a></li>
+										<li>
+											<span class="opener">Data List</span>
+											<ul>
+												<li><a href="/imageData">Image data</a></li>
+												<li><a href="/labelData">Label data</a></li>
+												<li><a href="/dataSet">Data set</a></li>
+											</ul>
+										</li>
+                                        <!--
+										<li><a href="#">name</a></li>
+										<li><a href="#">name</a></li>
+										--><li>
+											<span class="opener">Validation</span>
+											<ul>
+												<li><a href="/size_val">Size Error</a></li>
+												<li><a href="/area-val">Area Error</a></li>
+												<!--<li><a href="#"></a></li>
+												<li><a href="#">name</a></li>-->
+											</ul>
+										</li>
+
+									</ul>
+									
+								</nav>
+								<!-- Footer 
+								<footer id="footer">
+									<p class="copyright">&copy; Untitled. All rights reserved. Demo Images: <a href="https://unsplash.com">Unsplash</a>. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+								</footer>
+-->
+						</div>
+					</div>
+			</div>
+										
+
+		<!-- Scripts -->
+			<script src="{{ url_for('static', filename='/js/jquery.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='/js/browser.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='/js/breakpoints.min.js') }}"></script>
+			<script src="{{ url_for('static', filename='/js/util.js') }}"></script>
+			<script src="{{ url_for('static', filename='/js/main.js') }}"></script>
+
+	</body>
+</html>
